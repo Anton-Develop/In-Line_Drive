@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>In_Line_Drive</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BeOpen.Devices.ItLineScoreboards.NetworkCommunication">
+      <HintPath>..\itlinescoreboard\BeOpen.ItLineScoreboards.NetworkCommunication\bin\Debug\BeOpen.Devices.ItLineScoreboards.NetworkCommunication.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
