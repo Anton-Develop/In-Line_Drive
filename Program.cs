@@ -9,8 +9,10 @@ namespace In_Line_Drive
 {
     class Program
     {
+       
         static void Main(string[] args)
         {
+            
             try
             {
                 //создание объекта для отправки данных на табло(в конструктор передается порт для открытия сокета)
@@ -34,13 +36,13 @@ namespace In_Line_Drive
                 sender.SetNvstrData(new StringMessage(0, StringProfile.StrCenter, "ИЖ0"), null);
 
 
-                StringMessage message = new StringMessage(3, StringProfile.StrCenter, "Ж2");
 
-                var internalList = new List<StringMessage>();
-                 
+                List<StringMessage> stringMessages = new List<StringMessage>();
+               
+
                 //Console.WriteLine("Введите MAC Adress In-Line");
                 // PhysicalAddress physicalAddress= PhysicalAddress.Parse(Console.Read().ToString());
-                sender.SetRstrData(message, null);
+                sender.SetRstrData(stringMessages, null);
 
                 
             }
@@ -49,7 +51,7 @@ namespace In_Line_Drive
                 Console.WriteLine(ex);
             }
         }
-       
+        
 
     }
     
