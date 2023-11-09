@@ -46,6 +46,22 @@ namespace In_Line_Drive
             }
             try
             {
+                List<StringMessage> stringMessages = new List<StringMessage>();
+                stringMessages.Add(new StringMessage(0, StringProfile.StrLeft, "ПП"));
+
+                //Console.WriteLine("Введите MAC Adress In-Line");
+                // PhysicalAddress physicalAddress= PhysicalAddress.Parse(Console.Read().ToString());
+                sender.SetRstrData(stringMessages, null);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Rstr неудачно" + ex);
+            }
+            try
+            {
                 //пример установки ячейки RSTR(передается индекс ячейки в табло, выравнивание строки и сама строка) + target
                 sender.SetNvstrData(new StringMessage(0, StringProfile.StrCenter, "ИЖ0"), null);
 
@@ -54,22 +70,7 @@ namespace In_Line_Drive
             {
                 Console.WriteLine("Nvstr неудачно" + ex);
             }
-            try 
-            { 
-                List<StringMessage> stringMessages = new List<StringMessage>();
-                stringMessages.Add(new StringMessage(0, StringProfile.StrLeft, "ПП"));
-
-                //Console.WriteLine("Введите MAC Adress In-Line");
-                // PhysicalAddress physicalAddress= PhysicalAddress.Parse(Console.Read().ToString());
-                sender.SetRstrData(stringMessages, null);
-
-                
-                    
-            }
-            catch(Exception ex)
-            {
-                Console.WriteLine("Rstr неудачно" + ex);
-            }
+            
         }
         
 
