@@ -47,7 +47,7 @@ namespace In_Line_Drive
             try
             {
                 List<StringMessage> stringMessages = new List<StringMessage>();
-                stringMessages.Add(new StringMessage(0, StringProfile.StrLeft, "ПП"));
+                stringMessages.Add(new StringMessage(4, StringProfile.StrLeft, "ПП"));
 
                 //Console.WriteLine("Введите MAC Adress In-Line");
                 // PhysicalAddress physicalAddress= PhysicalAddress.Parse(Console.Read().ToString());
