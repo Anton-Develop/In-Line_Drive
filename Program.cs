@@ -52,8 +52,12 @@ namespace In_Line_Drive
                 //Console.WriteLine("Введите MAC Adress In-Line");
                 // PhysicalAddress physicalAddress= PhysicalAddress.Parse(Console.Read().ToString());
                 sender.SetRstrData(stringMessages, null);
-
-
+                byte[] getrstr= new byte[255];
+                sender.GetRstrData(getrstr, null);
+                foreach(var item in getrstr)
+                {
+                    Console.WriteLine("Ответ от табло"+item);
+                }
 
             }
             catch (Exception ex)
