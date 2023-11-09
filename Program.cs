@@ -31,7 +31,8 @@ namespace In_Line_Drive
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Поиск табло неудачно"+ex);
+                Console.WriteLine("Поиск табло неудачно");
+                Console.WriteLine(ex);
             }
             try
             {
@@ -42,7 +43,8 @@ namespace In_Line_Drive
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Яркость неудачно" + ex);
+                Console.WriteLine("Яркость неудачно");
+                Console.WriteLine(ex);
             }
             try
             {
@@ -57,12 +59,14 @@ namespace In_Line_Drive
                 foreach(var item in getrstr)
                 {
                     Console.WriteLine("Ответ от табло"+item);
+                   
                 }
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Rstr неудачно" + ex);
+                Console.WriteLine("Rstr неудачно" );
+                Console.WriteLine(ex);
             }
             try
             {
@@ -72,7 +76,8 @@ namespace In_Line_Drive
             }
             catch(Exception ex)
             {
-                Console.WriteLine("Nvstr неудачно" + ex);
+                Console.WriteLine("Nvstr неудачно" );
+                Console.WriteLine(ex);
             }
             
         }
